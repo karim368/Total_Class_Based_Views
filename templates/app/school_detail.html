@@ -7,12 +7,12 @@
 {% block body_block %}
 
 <center>
-    <u><h1>Detail Information of {{schoolobject.sname}}</h1></u>
+    <u><h1>Detail Information of {{schoolobject.sname}}</h1></u> <br>
     <h2>Name of the school :- {{schoolobject.sname}}</h2>
     <h2>Name of the Principal :- {{schoolobject.sprincipal}}</h2>
-    <h2>Location :- {{schoolobject.slocation}}</h2>
+    <h2>Location :- {{schoolobject.slocation}}</h2> <br>
 
-    <u><h1>Students Details are:-</h1></u>
+    <u><h1>Students Details are:-</h1></u> <br>
     <table border="2px">
         <tr>
             <th>Student Name</th>
@@ -24,7 +24,9 @@
                 <td>{{std.stdage}}</td>
             </tr>
         {% endfor %}
-    </table>
+    </table> <br><br>
+    
+    <a href="{% url 'SchoolUpdate' pk=schoolobject.pk %}" class="btn btn-primary">Update</a>
     
 </center>
 
